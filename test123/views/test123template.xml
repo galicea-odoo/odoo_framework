@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+    <template id="test123t" name="Szablon komunikatu">
+       <t t-call="website.layout">
+         <div id="wrap">
+           <div class="container">
+             <div>
+                <h2>Nagłówek</h2>
+                <p>Tekst</p>
+             </div>
+           </div>
+         </div>
+       </t>
+    </template>
+</data>
+</odoo>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    
+        <record model="ir.ui.view" id="struktura.widok1">
+            <field name="name">Demo - widok1</field>
+            <field name="model">demo1.model</field>
+            <field name="arch" type="xml">
+                <form string="Przykład">
+                    <sheet>
+                        <group>
+                            <field name="pole1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="struktura.widok2">
+            <field name="name">Demo - widok2</field>
+            <field name="model">demo1.model</field>
+            <field eval="10" name="priority"/>
+            <field name="inherit_id" ref="struktura.widok1"/>
+            <field name="arch" type="xml">
+                <field name="pole1" position="after">
+                    <field name="pole2"/></field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="struktura.widok_tab">
+            <field name="name">Demo - tabela</field>
+            <field name="model">demo1.model</field>
+            <field name="arch" type="xml">
+                <tree string="Tabela">
+                    <field name="pole1"/>
+                    <field name="pole2"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="struktura.otworz1">
+            <field name="name">demo1.otworz1</field>
+            <field name="view_id" ref="struktura.widok1" />
+            <field name="res_model">demo1.model</field>
+            <field name="view_type">form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="struktura.otworz2">
+            <field name="name">demo1.otworz2</field>
+            <field name="view_id" ref="struktura.widok2" />
+            <field name="res_model">demo1.model</field>
+            <field name="view_type">form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="struktura.otworz3">
+            <field name="name">demo1.otworz3</field>
+            <field name="view_id" ref="struktura.widok_tab" />
+            <field name="res_model">demo1.model</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Demo" id="menu_demo1" sequence="100" action='struktura.otworz3' parent="" />
+        <menuitem name="Demo - 1" id="menu_demo1_1" sequence="100" action='struktura.otworz1' parent="menu_demo1" />
+        <menuitem name="Demo - 2" id="menu_demo1_2" sequence="200" action='struktura.otworz2' parent="menu_demo1" />
+        <menuitem name="Demo - 3" id="menu_demo1_3" sequence="300" action='struktura.otworz3' parent="menu_demo1" />
+        
+    </data>
+</odoo>

@@ -1,0 +1,35 @@
+<odoo>
+    <data>
+
+        <!-- widok -->
+        <record id="demo_form0" model="ir.ui.view">
+            <field name="name">demo_js_form0</field>
+            <field name="model">res.users</field>
+            <field name="arch" type="xml">
+                <form string="Demo JS" id="form0">
+                    <widget type="mywidget0" attrs="{}">
+                    </widget>
+                </form>
+            </field>
+        </record>
+        <!-- okno w którym otwieramy widok -->
+        <record id="akcja_otwarcia_form0" model="ir.actions.act_window">
+            <field name="name">Demo JS</field>
+            <field name="res_model">res.users</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="demo_form0"/>
+        </record>
+        <menuitem action="akcja_otwarcia_form0" id="demo_js_form_menu0"/>
+
+
+        <!-- wlasna akcja - mywidget1.js -->
+        <record id="akcja_js" model="ir.actions.client">
+            <field name="name">zdefiniowane w js</field>
+            <field name="tag">myaction1</field>
+        </record>
+
+        <menuitem action="akcja_js" id="demo_js_form_menu1" parent="demo_js_form_menu0"/>
+    </data>
+</odoo>
+

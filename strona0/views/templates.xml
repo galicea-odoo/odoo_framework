@@ -1,0 +1,17 @@
+<odoo>
+ <data>
+   <template id="strona0" name="Hello world" page="True">
+     <t t-call = "website.layout">
+      <div>Hello world</div>
+   </t>
+  </template>
+  
+<record id="sstrona0_link" model="website.menu">
+<field name="name">Strona0</field>
+<field name="url">/page/strona0.strona0</field>
+<field name="parent_id" ref="website.main_menu" />
+<field name="sequence" type="int">99</field>
+</record>
+
+ </data>
+</odoo>

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<data>
+<!-- widok tabeli -->
+    <record id="widok_tabeli123" model="ir.ui.view">
+            <field name="name">Tytul okna</field>
+            <field name="model">test123.tabela123</field>
+            <field name="arch" type="xml">
+<!-- przekopiowane z debug - widok pól -->
+<tree string="test123.tabela123">
+ <field name="kolumna" modifiers="{'readonly': true}"/>
+</tree>
+
+            </field>
+    </record>
+
+<!-- WIDOK FORMULARZA -->
+    <record id="widok_formularza123" model="ir.ui.view">
+            <field name="name">Formularz - okno</field>
+            <field name="model">test123.tabela123</field>
+            <field name="arch" type="xml">
+
+<form string="Test123">
+ <field name="cena2" />
+ <field name="kolumna" />
+ <field name="wartosc" />
+ <field name="tysiace" />
+ 
+ <field name="cena" on_change="on_change_cena0(cena,upust)"/>
+ <field name="upust" on_change="on_change_cena0(cena,upust)"/>
+
+ <field name="wartosc1" />
+ <field name="cena1" />
+ <field name="upust1" />
+
+</form>
+
+            </field>
+    </record>
+
+
+<!-- okno w którym otwieramy widok -->
+    <record id="akcja_otwarcia123" model="ir.actions.act_window">
+        <field name="name">Test123 - akcja</field>
+        <field name="res_model">test123.tabela123</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="widok_formularza123"/> <!-- widok tabeli - zob. wyzej -->
+        <field name="context">{}</field>
+    </record>
+
+  <act_window
+     id="akcjaOtwarcia123"
+     name="otworz123"
+     res_model="test123.tabela123" />
+
+
+
+    <menuitem name="Moje 123" id="menu_123" sequence="300" parent=""  action='akcja_otwarcia123' />
+    <!-- menuitem name="Test" id="test_123" sequence="300" parent=""  action='/controler123/test' / -->
+
+
+</data>

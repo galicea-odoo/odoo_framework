@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="action_welcome">
+            <field name="name">ex1q</field>
+            <field name="help" type="html">
+                <p class="ex1q_view_info">Hallo World</p>
+            </field>
+        </record>
+    </data>
+</odoo>

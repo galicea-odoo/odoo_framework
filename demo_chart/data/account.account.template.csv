@@ -1,0 +1,37 @@
+id,chart_template_id:id,code,name,user_type_id:id,reconcile
+pl_01_0,demo_chart_template,01-0,Środki Trwałe,account.data_account_type_non_current_assets,FALSE
+pl_02_0,demo_chart_template,02-0,Wartości niematerialne i prawne,account.data_account_type_non_current_assets,FALSE
+pl_07_0,demo_chart_template,07-0,Odpisy umorzeniowe środków trwałych,account.data_account_type_depreciation,FALSE
+pl_07_1,demo_chart_template,07-1,Odpisy umorzeniowe wartości niematerialnych i prawnych,account.data_account_type_depreciation,FALSE
+pl_10_0,demo_chart_template,10-0,Środki pieniężne w kasie,account.data_account_type_liquidity,FALSE
+pl_12_0,demo_chart_template,12-0,Inne środki pieniężne,account.data_account_type_liquidity,FALSE
+pl_13_0,demo_chart_template,13-0,Rachunek bieżący w banku,account.data_account_type_liquidity,FALSE
+pl_20_0,demo_chart_template,20-0,Rozrachunki z odbiorcami,account.data_account_type_receivable,TRUE
+pl_20_1,demo_chart_template,20-1,Rozrachunki z dostawcami,account.data_account_type_payable,TRUE
+pl_22_0,demo_chart_template,22-0,Rozrachunki z urzędem skarbowym,account.data_account_type_payable,TRUE
+pl_22_1,demo_chart_template,22-1,Rozrachunki publicznoprawne z ZUS,account.data_account_type_payable,TRUE
+pl_22_9,demo_chart_template,22-9,Pozostałe rozrachunki publicznoprawne,account.data_account_type_payable,TRUE
+pl_23_0,demo_chart_template,23-0,Rozrachunki z pracownikami,account.data_account_type_payable,TRUE
+pl_24_0,demo_chart_template,24-0,Pozostałe rozrachunki,account.data_account_type_payable,TRUE
+pl_30_0,demo_chart_template,30-0,Rozliczenie zakupu,account.data_account_type_current_assets,TRUE
+pl_33_0,demo_chart_template,33-0,Towary,account.data_account_type_current_assets,FALSE
+pl_40_0,demo_chart_template,40-0,Koszty według rodzajów i ich rozliczenie,account.data_account_type_expenses,FALSE
+pl_40_1,demo_chart_template,40-1,Zużycie materiałów i energii,account.data_account_type_expenses,FALSE
+pl_40_2,demo_chart_template,40-2,Usługi obce,account.data_account_type_expenses,FALSE
+pl_40_3,demo_chart_template,40-3,Podatki i opłaty,account.data_account_type_expenses,FALSE
+pl_40_4,demo_chart_template,40-4,Wynagrodzenia i narzuty,account.data_account_type_expenses,FALSE
+pl_40_5,demo_chart_template,40-5,Amortyzacja,account.data_account_type_expenses,FALSE
+pl_40_6,demo_chart_template,40-6,Pozostałe koszty rodzajowe,account.data_account_type_expenses,FALSE
+pl_49_0,demo_chart_template,49-0,Rozliczenie kosztów,account.data_account_type_expenses,FALSE
+pl_60_0,demo_chart_template,60-0,Produkty i rozliczenia międzyokresowe,account.data_account_type_current_assets,FALSE
+pl_70_0,demo_chart_template,70-0,Przychody ze sprzedaży,account.data_account_type_revenue,FALSE
+pl_70_1,demo_chart_template,70-1,Koszt własny sprzedaży,account.data_account_type_direct_costs,FALSE
+pl_75_0,demo_chart_template,75-0,Przychody finansowe,account.data_account_type_revenue,FALSE
+pl_75_1,demo_chart_template,75-1,Koszty finansowe,account.data_account_type_direct_costs,FALSE
+pl_76_0,demo_chart_template,76-0,Pozostałe przychody operacyjne,account.data_account_type_revenue,FALSE
+pl_76_1,demo_chart_template,76-1,Pozostałe koszty operacyjne,account.data_account_type_direct_costs,FALSE
+pl_77_0,demo_chart_template,77-0,Zyski nadzwyczajne,account.data_account_type_revenue,FALSE
+pl_77_1,demo_chart_template,77-1,Straty nadzwyczajne,account.data_account_type_direct_costs,FALSE
+pl_80_0,demo_chart_template,80-0,Fundusz podstawowy,account.data_account_type_equity,FALSE
+pl_86_0,demo_chart_template,86-0,Wynik finansowy,account.data_account_type_equity,FALSE
+pl_87_0,demo_chart_template,87-0,Obciążenia wyniku finansowego,account.data_account_type_equity,FALSE

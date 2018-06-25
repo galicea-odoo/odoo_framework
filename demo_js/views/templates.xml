@@ -1,0 +1,11 @@
+<odoo>
+    <data>
+        <template id="assets_backend" name="web_demo_js_assets" inherit_id="web.assets_backend">
+            <!-- dołączenie javascript -->
+            <xpath expr="script[last()]" position="after">
+                <script type="text/javascript" src="/demo_js/static/src/js/mywidget0.js"/>
+                <script type="text/javascript" src="/demo_js/static/src/js/mywidget1.js"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

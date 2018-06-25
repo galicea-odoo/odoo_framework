@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<template id="event_script" inherit_id="website.assets_frontend" name="Events Script">
+    <xpath expr="/t" position="inside">
+        <script type="text/javascript" src="/front3/static/src/js/front3.js"></script>
+    </xpath>
+</template>
+
+
+
+    <template id="front3_tmpl" inherit_id="website_event.registration_template">
+        <xpath expr="//form" position="after">
+           <h2>front3</h2>
+           position="inside"?
+           <form id="front3_form" t-attf-action="/front3" method="post">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                <button type="submit"
+                   class="btn front3-submit">Front 3 Test</button>
+            </form>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,59 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="amove.list">
+      <field name="name">amove list</field>
+      <field name="model">amove.amove</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="amove.action_window">
+      <field name="name">amove window</field>
+      <field name="res_model">amove.amove</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="amove.action_server">
+      <field name="name">amove server</field>
+      <field name="model_id" ref="model_amove_amove"/>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="amove" id="amove.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="amove.menu_1" parent="amove.menu_root"/>
+    <menuitem name="Menu 2" id="amove.menu_2" parent="amove.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="amove.menu_1_list" parent="amove.menu_1"
+              action="amove.action_window"/>
+    <menuitem name="Server to list" id="amove" parent="amove.menu_2"
+              action="amove.action_server"/>
+    -->
+  </data>
+</odoo>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+<record id="demo_master_details.spis" model="ir.ui.view">
+  <field name="name">Spis</field>
+  <field name="model">demo.form.master</field>
+  <field name="arch" type="xml">
+    <tree string="lista">
+      <field name="opis" />
+    </tree>
+  </field>
+</record>
+
+<record id="demo_master_details.formularz" model="ir.ui.view">
+  <field name="name">Szczegóły</field>
+  <field name="model">demo.form.master</field>
+  <field name="arch" type="xml">
+    <form string="Szczegóły">
+      <group col="1">
+        <field name="opis" />
+      </group>
+      <notebook>
+        <page string="Parametry">
+          <field name="details_ids"> <!-- widget="one2many_list" -->
+            <tree string="Lista"> <!-- editable="top" -->
+              <field name="parametr" />
+            </tree>
+            <form string="Dodatkowe" editable="top">
+              <field name="parametr" />
+            </form>
+          </field>
+        </page>
+      </notebook>
+    </form>
+  </field>
+</record>
+
+<record id="action_form_demo" model="ir.actions.act_window">
+  <field name="name">Demo - formularz</field>
+  <field name="res_model">demo.form.master</field>
+  <field name="view_id" ref="demo_master_details.spis"/>
+  <field name="view_type">form</field>
+  <field name="view_mode">tree,form</field>
+  <field name="target">current</field>
+</record>
+
+
+<menuitem name="Demo - formularz" 
+     id="demo_formularz" 
+     action="action_form_demo" />
+
+</data>
+</odoo>

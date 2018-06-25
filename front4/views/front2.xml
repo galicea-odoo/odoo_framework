@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="front2_tmpl" inherit_id="website_event.registration_template">
+        <xpath expr="//form" position="after">
+            <h2>TEST2</h2>
+            <form id="sale_front2_form" t-attf-action="/front2" method="post">
+            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                <button type="submit"
+                   class="btn btn-primary btn-lg pull-right a-submit">Front 2 Test</button>
+            </form>
+        </xpath>
+    </template>
+</odoo>

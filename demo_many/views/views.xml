@@ -1,0 +1,30 @@
+<odoo>
+
+<record model="ir.ui.view" id="mdemo1v">
+  <field name="name">Partnerzy</field>
+  <field name="model">demo.mdemo</field>
+  <field name="arch" type="xml">
+    <form>
+        <group  col="2" name="Forum">
+           <field name="sel" />
+            <field name="partners" />
+      </group>
+    </form>
+  </field>
+</record>
+
+
+
+<record id="action_mdemo" model="ir.actions.act_window">
+  <field name="name">Demo</field>
+  <field name="res_model">demo.mdemo</field>
+  <field name="view_id" ref="mdemo1v"/>
+  <field name="view_type">form</field>
+  <field name="view_mode">form</field>
+  <field name="target">inline</field>
+</record>
+
+
+<menuitem id="demo_many_menu" name="Demo One2many" action="action_mdemo" sequence="2"/>
+
+</odoo>

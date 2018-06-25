@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+<!-- VAT - sprzedaz -->
+<record id="demo_tag_sale_vat" model="account.account.tag">
+  <field name="name">Sprzedaż towarów/usług, kraj, zwolnione</field>
+  <field name="applicability">taxes</field>
+</record>
+<record id="vat_s_zw" model="account.tax.template">
+  <field name="chart_template_id" ref="demo_chart_template"/>
+  <field name="name">Zwolniony z VAT</field>
+  <field name="description">VZW</field>
+  <field name="amount">0</field>
+  <field name="amount_type">percent</field>
+  <field name="type_tax_use">sale</field>
+  <field name="tag_ids" eval="[(6,0,[ref('demo_chart.demo_tag_sale_vat')])]"/>
+</record>
+
+<!-- VAT zakup -->
+<record id="demo_tag_purchase_vat" model="account.account.tag">
+  <field name="name">Zakupy</field>
+  <field name="applicability">taxes</field>
+</record>
+<record id="vat_z_23" model="account.tax.template">
+  <field name="chart_template_id" ref="demo_chart_template"/>
+  <field name="name">VAT naliczony 23%</field>
+  <field name="description">Z23</field>
+  <field name="amount">23</field>
+  <field name="amount_type">percent</field>
+  <field name="sequence" eval="0"/>
+  <field name="type_tax_use">purchase</field>
+  <field name="account_id" ref="pl_40_3"/>
+  <field name="tag_ids" eval="[(6,0,[ref('demo_chart.demo_tag_purchase_vat')])]"/>
+</record>
+<record id="vat_z_8" model="account.tax.template">
+  <field name="chart_template_id" ref="demo_chart_template"/>
+  <field name="name">VAT naliczony 8%</field>
+  <field name="description">Z8</field>
+  <field name="amount">8</field>
+  <field name="amount_type">percent</field>
+  <field name="type_tax_use">purchase</field>
+  <field name="account_id" ref="pl_40_3"/>
+  <field name="tag_ids" eval="[(6,0,[ref('demo_chart.demo_tag_purchase_vat')])]"/>
+</record>
+<record id="vat_z_5" model="account.tax.template">
+  <field name="chart_template_id" ref="demo_chart_template"/>
+  <field name="name">VAT naliczony 5%</field>
+  <field name="description">Z5</field>
+  <field name="amount">5</field>
+  <field name="amount_type">percent</field>
+  <field name="type_tax_use">purchase</field>
+  <field name="account_id" ref="pl_40_3"/>
+  <field name="tag_ids" eval="[(6,0,[ref('demo_chart.demo_tag_purchase_vat')])]"/>
+</record>
+<record id="vat_z_3" model="account.tax.template">
+  <field name="chart_template_id" ref="demo_chart_template"/>
+  <field name="name">VAT naliczony 3%</field>
+  <field name="description">Z3</field>
+  <field name="amount">3</field>
+  <field name="amount_type">percent</field>
+  <field name="type_tax_use">purchase</field>
+  <field name="account_id" ref="pl_40_3"/>
+  <field name="tag_ids" eval="[(6,0,[ref('demo_chart.demo_tag_purchase_vat')])]"/>
+</record>
+<record id="vat_z_0" model="account.tax.template">
+  <field name="chart_template_id" ref="demo_chart_template"/>
+  <field name="name">VAT naliczony 0%</field>
+  <field name="description">Z0</field>
+  <field name="amount">0</field>
+  <field name="amount_type">percent</field>
+  <field name="type_tax_use">purchase</field>
+  <field name="tag_ids" eval="[(6,0,[ref('demo_chart.demo_tag_purchase_vat')])]"/>
+</record>
+<record id="vat_z_zw" model="account.tax.template">
+  <field name="chart_template_id" ref="demo_chart_template"/>
+  <field name="name">Zakup bez VAT</field>
+  <field name="description">ZZW</field>
+  <field name="amount">0</field>
+  <field name="amount_type">percent</field>
+  <field name="type_tax_use">purchase</field>
+  <field name="tag_ids" eval="[(6,0,[ref('demo_chart.demo_tag_purchase_vat')])]"/>
+</record>
+
+
+</odoo>

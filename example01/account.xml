@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+<!-- widok tabeli -->
+    <record id="view_account_tree" model="ir.ui.view">
+            <field name="name">Plan kont - okno</field>
+            <field name="model">account.account</field>
+            <field name="arch" type="xml">
+                <tree string="Plan kont">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="internal_type" invisible="1"/>
+                </tree>
+            </field>
+    </record>
+
+<!-- okno w którym otwieramy widok - wykorzstujemy standardowy model account.account -->
+    <record id="akcja_otwarcia" model="ir.actions.act_window">
+        <field name="name">Plan kont - akcja</field>
+        <field name="res_model">account.account</field>
+        <field name="view_type">tree</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_account_tree"/> <!-- widok tabeli - zob. wyzej -->
+        <field name="context">{}</field>
+    </record>
+
+
+    <menuitem name="Example 01" id="menu_example01" sequence="300" parent="account.menu_finance_entries"  action='akcja_otwarcia' />
+
+</data>
+</odoo>

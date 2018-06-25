@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="front1_tmpl" inherit_id="website_event.index">
+        <xpath expr="//ul" position="after">
+            <h2>TEST1</h2>
+            <form id="sale_front1_form" t-attf-action="/front1" method="post">
+            /event/front1/{slug(event)}
+            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+SEE: https://www.odoo.com/documentation/9.0/reference/http.html#csrf for
+
+
+                <button type="submit"
+                   class="btn btn-primary btn-lg pull-right a-submit">Front 1 Test</button>
+            </form>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<template id="event_script" inherit_id="website.assets_frontend" name="Events Script">
+    <xpath expr="/t" position="inside">
+        <script type="text/javascript" src="/front4/static/src/js/front4.js"></script>
+    </xpath>
+</template>
+
+
+
+    <template id="front4_tmpl" inherit_id="website_event.registration_template">
+        <xpath expr="//form" position="after">
+           <h2>front4</h2>
+           position="inside"?
+           <form id="front4_form" t-attf-action="/front4_modal" method="post">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                <button type="submit"
+                   class="btn front4-submit">Front 4 Test</button>
+            </form>
+        </xpath>
+    </template>
+
+    <template id="modal_form" name="Okienko modalne">
+        <div id="modal_attendees_registration" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <form id="attendee_registration" t-attf-action="/front4" method="post">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                            <h4 class="modal-title" id="myModalLabel">
+                                <strong>Front 4 test</strong>
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                               dane
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="pull-left">
+                                <button type="submit" class="btn btn-primary">Kontynuuj</button> lub
+                                <a class="js_goto_event" style="cursor: pointer;"> Anuluj (JS)</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </template>
+
+</odoo>

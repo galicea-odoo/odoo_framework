@@ -1,0 +1,21 @@
+<odoo>
+<data>
+<record id="moja_unikalna_nazwa_cron" model="ir.cron">
+<field name="name">Akcja demo - cron</field>
+<field name="active">True</field>
+<field name="user_id" ref="base.user_root"/>
+<field name="interval_number">1</field>
+<field name="interval_type">hours</field>
+<field name="numbercall">-1</field>
+<!-- field name="model">demo.act</field>
+<field name="function">akcja_cron</field>
+<field name="args">()</field>
+<field name="priority">1</field -->
+       <field name="doall" eval="False"/>
+        <field name="model" eval="'demo.act'"/>
+        <field name="function" eval="'akcja_cron'"/>
+        <field name="args" eval="'()'" />
+
+</record>
+</data>
+</odoo>

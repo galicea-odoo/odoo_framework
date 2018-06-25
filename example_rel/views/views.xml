@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="example_rel.demo1ex_tree">
+            <field name="name">Demo1ex</field>
+            <field name="model">demo.demo1ex</field>
+            <field name="arch" type="xml">
+                <tree string="Przykład - powiazania">
+                   <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="example_rel.demo1ex_form">
+            <field name="name">Demo1ex</field>
+            <field name="model">demo.demo1ex</field>
+            <field name="arch" type="xml">
+                <form string="Przykład - powiazania">
+                   <field name="name"/>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="example_rel.demo2ex">
+            <field name="name">Demo2ex</field>
+            <field name="model">demo.demo2ex</field>
+            <field name="arch" type="xml">
+                <form string="Przykład - powiazania">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="pole_one2many"/>
+                        </group>
+                        <group>
+                            <field name="pole_many2one"/>
+                        </group>
+                        <group>
+                            <field name="pole_many2many"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+ 
+        <record model="ir.ui.view" id="example_rel.demo2ex_tree">
+            <field name="name">Demo1ex</field>
+            <field name="model">demo.demo2ex</field>
+            <field name="arch" type="xml">
+                <tree string="Przykład - powiazania">
+                  <field name="name"/>
+                  <field name="pole_many2one"/>
+                </tree>
+            </field>
+        </record>
+ 
+        <record model="ir.actions.act_window" id="example_rel.otworz1">
+            <field name="name">demo.otworz1</field>
+            <field name="view_id" ref="example_rel.demo1ex_tree" />
+            <field name="res_model">demo.demo1ex</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record model="ir.actions.act_window" id="example_rel.otworz2">
+            <field name="name">demo.otworz2</field>
+            <field name="view_id" ref="example_rel.demo2ex_tree" />
+            <field name="res_model">demo.demo2ex</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem name="Demo_ex - 2" id="menu_example_rel" sequence="100" action='example_rel.otworz2' parent="" />
+        <menuitem name="Demo_ed - 1" id="menu_demo1_1" sequence="100" action='example_rel.otworz1' parent="menu_example_rel" />
+    </data>
+</odoo>
